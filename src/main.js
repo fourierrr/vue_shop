@@ -8,9 +8,10 @@ import {
   Container, Header, Aside, Main, Menu, Submenu,
   MenuItemGroup, MenuItem, Breadcrumb, BreadcrumbItem, Card, Row, Col,
   Table, TableColumn, Switch, Tooltip, Pagination, Dialog, MessageBox,
-  Tag, Tree, Option, Select
+  Tag, Tree, Option, Select, Cascader
 } from 'element-ui'
 import axios from 'axios'
+import TreeTable from 'vue-table-with-tree-grid'
 axios.defaults.baseURL = 'http://timemeetyou.com:8889/api/private/v1'
 // axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1'
 axios.interceptors.request.use(config => {
@@ -45,9 +46,11 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 Vue.config.productionTip = false
+Vue.component('tree-table', TreeTable)
 
 new Vue({
   router,

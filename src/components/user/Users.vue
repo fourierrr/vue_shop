@@ -117,7 +117,7 @@
     <el-dialog
       title="分配角色"
       :visible.sync="setRoleDiologVisible"
-      width="50%" :ref="setRoleDiologRef"
+      width="50%"
       @close="setRoleDiologClose">
       <div>
         <p>当前的用户: {{userInfo.username}}</p>
